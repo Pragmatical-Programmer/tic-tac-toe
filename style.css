@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#gameSquare {
+  height: 600px;
+  width: 600px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat((3, 1fr));
+  line-height: 0;
+}
+
+.innerSquare {
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+  font-size: 100px;
+}
+
+#child1,
+#child2,
+#child3 {
+  border-top: 0;
+}
+
+#child1,
+#child4,
+#child7 {
+  border-left: 0;
+}
+#child7,
+#child8,
+#child9 {
+  border-bottom: 0;
+}
+#child3,
+#child6,
+#child9 {
+  border-right: 0;
+}
+#gameSquare:last-child {
+  border-right: 0;
+}
